@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AI After Hours</title>
+  <meta name="description" content="Get in touch with AI After Hours. Have questions about our Huntsville AI meetup? We'd love to hear from you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AI After Hours</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="index.html#register" class="nav-cta">Register</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><span class="gradient-text">Contact Us</span></h1>
+    <p>Have questions? We'd love to hear from you.</p>
+  </div>
+
+  <!-- Contact Content -->
+  <div class="contact-grid">
+    <!-- Info Column -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>
+        Whether you have a question about upcoming events, want to be a speaker,
+        or are interested in partnering with AI After Hours &mdash; drop us a message
+        and we'll get back to you.
+      </p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#x1F4CD;</div>
+        <div>
+          <h4>Location</h4>
+          <p>I2C (Invention to Innovation Center)<br>University of Alabama in Huntsville</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#x1F4C5;</div>
+        <div>
+          <h4>Events</h4>
+          <p>Monthly meetup &mdash; stay tuned for dates</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#x1F3E2;</div>
+        <div>
+          <h4>Hosted By</h4>
+          <p>ARC of I2C<br>In partnership with Zellus Marketing</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">&#x1F464;</div>
+        <div>
+          <h4>Open to Everyone</h4>
+          <p>Developers, entrepreneurs, students, and the AI-curious</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Column -->
+    <div class="contact-form-card">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select a topic</option>
+            <option value="general">General Question</option>
+            <option value="events">Upcoming Events</option>
+            <option value="speaker">Speaker Inquiry</option>
+            <option value="partnership">Partnership Opportunity</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+      <p id="formSuccess" style="display:none; text-align:center; margin-top:1.5rem; color: #4ade80; font-weight: 600;">
+        Thanks for reaching out! We'll get back to you soon.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><span class="gradient-text">AI After Hours</span> &bull; Huntsville &bull; Powered by Community</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Form submission handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('formSuccess');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

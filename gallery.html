@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - AI After Hours</title>
+  <meta name="description" content="Photos and highlights from previous AI After Hours events in Huntsville, AL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AI After Hours</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#register" class="nav-cta">Register</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><span class="gradient-text">Gallery</span></h1>
+    <p>Highlights and moments from our AI After Hours events</p>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F3A4;</div>
+        <span>Featured Speaker Session</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Featured Speaker</h4>
+        <p>Learning from AI industry leaders</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F4BB;</div>
+        <span>Live Coding Demo</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Live Build</h4>
+        <p>Vibe coding a website in real time</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F91D;</div>
+        <span>Networking Hour</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Networking</h4>
+        <p>Connecting with fellow AI enthusiasts</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F355;</div>
+        <span>Pizza &amp; Conversations</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Community</h4>
+        <p>Good food and great conversations</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F680;</div>
+        <span>Hands-On Workshop</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Workshop</h4>
+        <p>Trying vibe coding hands-on</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">&#x1F3DB;&#xFE0F;</div>
+        <span>I2C Venue</span>
+      </div>
+      <div class="gallery-overlay">
+        <h4>Our Venue</h4>
+        <p>Invention to Innovation Center at UAH</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="gallery-notice">
+    Photos from upcoming events will be added here. Stay tuned!
+  </p>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Want to be in the next photo?</h2>
+    <p>Join us at the next AI After Hours event and be part of the Huntsville AI community.</p>
+    <a href="index.html#register" class="btn-primary">Register Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><span class="gradient-text">AI After Hours</span> &bull; Huntsville &bull; Powered by Community</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
